@@ -5,11 +5,10 @@ namespace Bakery.Models
 {
   public class PastryOrder
   {
-    public string NumberPastries { get; }
-
-    public PastryOrder(string numberPastries)
+    public int AmountPastries { get; set; }
+    public PastryOrder (int amountPastries)
     {
-      NumberPastries = numberPastries;
+      AmountPastries = amountPastries;
     }
   }
 }

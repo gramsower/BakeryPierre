@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using Bakery.Models;
 
 namespace Bakery.Tests
@@ -9,23 +10,22 @@ namespace Bakery.Tests
     [TestMethod]
     public void PastryOrder_CreateInstanceOfPastryOrder_Order()
     {
-      PastryOrder testOrder = new PastryOrder("0");
+      PastryOrder testOrder = new PastryOrder(0);
       Assert.AreEqual(typeof(PastryOrder), testOrder.GetType());
     }
 
     [TestMethod]
-    public void PastryOrder_ReturnsNumberOfPastries_ReturnsString()
+    public void PastryOrder_ReturnAmountOfPastries_ReturnsNumber()
     {
       //Arrange
-      string numberPastries = "0";
-      PastryOrder testOrder = new PastryOrder(numberPastries);
+      int amountPastries = 0;
+      PastryOrder testOrder = new PastryOrder(amountPastries);
 
       //Act
-      string result = testOrder.NumberPastries;
+      int result = testOrder.AmountPastries;
 
       //Assert
-      Assert.AreEqual(numberPastries, result);
-    }
-
+      Assert.AreEqual(amountPastries, result);
+    }   
   }
 }
