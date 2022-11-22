@@ -7,10 +7,24 @@ namespace Bakery.Tests
   public class PastryOrderTests
   {
     [TestMethod]
-    public void PastryConstructor_CreateInstanceOfPastryOrder_Order()
+    public void PastryOrder_CreateInstanceOfPastryOrder_Order()
     {
-      PastryOrder tesOrder = new PastryOrder();
+      PastryOrder testOrder = new PastryOrder("0");
       Assert.AreEqual(typeof(PastryOrder), testOrder.GetType());
+    }
+
+    [TestMethod]
+    public void PastryOrder_ReturnsNumberOfPastries_ReturnsString()
+    {
+      //Arrange
+      string numberPastries = "0";
+      PastryOrder testOrder = new PastryOrder(numberPastries);
+
+      //Act
+      string result = testOrder.NumberPastries;
+
+      //Assert
+      Assert.AreEqual(numberPastries, result);
     }
 
   }
