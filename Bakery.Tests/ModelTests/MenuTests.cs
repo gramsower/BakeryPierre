@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using Bakery.Models;
 
 namespace Bakery.Tests
@@ -74,7 +73,33 @@ namespace Bakery.Tests
       int result = testOrder.BreadCost();
 
       //Assert
-      Assert.AreEqual(4, result);
+      Assert.AreEqual(5, result);
+    }
+    [TestMethod]
+    public void BreadCost_Calculate6LoafCost_ReturnCost()
+    {
+      //Arrange
+      int numberLoaves = 6;
+      Bread testOrder = new Bread(numberLoaves);
+
+      //Act
+      int result = testOrder.BreadCost();
+
+      //Assert
+      Assert.AreEqual(20, result);
+    }
+    [TestMethod]
+    public void BreadCost_Calculate10LoafCost_ReturnCost()
+    {
+      //Arrange
+      int numberLoaves = 10;
+      Bread testOrder = new Bread(numberLoaves);
+
+      //Act
+      int result = testOrder.BreadCost();
+
+      //Assert
+      Assert.AreEqual(35, result);
     }
   }
 }

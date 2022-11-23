@@ -1,7 +1,3 @@
-//using System;
-// using System.Collections.Generic;
-// using Bakery;
-
 namespace Bakery.Models
 {
   public class Bread
@@ -19,9 +15,17 @@ namespace Bakery.Models
         int breadCost = NumberLoaves * 5;
         return breadCost;
       }
-      else 
+      else if (NumberLoaves % 3 == 0)
       {
-        return 0;
+        int breadCost = NumberLoaves/3 * 10;
+        return breadCost;
       }
+      else
+      {
+        int breadRemainder = NumberLoaves % 3;
+        int breadCost = (NumberLoaves - breadRemainder)/3 * 10 + (5*breadRemainder);
+        return breadCost;
+      }    
+    }
   }
 }
