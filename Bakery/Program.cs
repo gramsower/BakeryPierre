@@ -9,7 +9,17 @@ namespace Bakery
     public static void Main()
     {
       Console.WriteLine("Welcome to Pierre's Bakery!");
-      Console.WriteLine("How many pastries or loaves of bread would you like? \nBread: $5 per loaf \nPastry: $2 each. \n****************** \nBuy two loaves and get the third one FREE (applies to every third loaf purchased.) \n****************** \nBuy three to five pastries and recieve a dollar off your order. \nBuy six or more pastries and get one free!");
+      Console.WriteLine("We Offer Bread And Pastries. \nBread: $5 per loaf \nPastry: $2 each \n****************** \n\nSPECIALS! \nBuy two loaves and get the third one FREE (applies to every third bread loaf purchased.) \n\nBuy three, four, or five pastries and recieve a dollar off your order total. \nBuy six or more pastries and get one free! \n");
+
+      Console.WriteLine("How many bread loaves would you like today?");
+      string breadInput = Console.ReadLine();
+      int numberPastrises = Convert.ToInt32(breadInput);
+
+      Console.WriteLine("How many pastries would you like today?");
+      string pastryInput = Console.ReadLine();
+      int numberPastries = Convert.ToInt32(pastryInput);
+
+
       
     }
   }
