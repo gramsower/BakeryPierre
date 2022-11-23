@@ -5,40 +5,54 @@ using Bakery.Models;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class PastryOrderTests
+  public class PastryTests
   {
     [TestMethod]
-    public void PastryOrder_CreateInstanceOfPastryOrder_Order()
+    public void PastryConstructor_CreateInstanceOfPastry__Pastry()
     {
-      PastryOrder testOrder = new PastryOrder(1);
-      Assert.AreEqual(typeof(PastryOrder), testOrder.GetType());
+      Pastry testOrder = new Pastry(1);
+      Assert.AreEqual(typeof(Pastry), testOrder.GetType());
     }
 
-    [TestMethod]
+    /* [TestMethod]
     public void PastryOrder_ReturnAmountOfPastries_ReturnsNumber()
     {
       //Arrange
       int amountPastries = 1;
-      PastryOrder testOrder = new PastryOrder(amountPastries);
+      Pastry testOrder = new Pastry(amountPastries);
 
       //Act
       int result = testOrder.AmountPastries;
 
       //Assert
       Assert.AreEqual(amountPastries, result);
-    }   
-    /*[TestMethod]
-    public void PastryOrder_CalculateSinglePastryCost_ReturnPastryTotal()
+    }*/
+    
+    [TestMethod]
+    public void PastryOrderCost_Calculate6PastryCost_ReturnPastryTotal()
     {
       //Arrange
-      int amountPastries = 1;
-      PastryOrder testOrder = new PastryOrder(amountPastries);
+      int amountPastries = 6;
+      Pastry testOrder = new Pastry(amountPastries);
 
       //Act
-      int result = testOrder.AmountPastries;
+      int result = testOrder.PastryOrderCost();
 
       //Assert
-      Assert
-    } */
+      Assert.AreEqual(10, result);
+    }
+    [TestMethod]
+    PastryOrderCost_Calculate4PastryCost_ReturnPastryTotal()
+    {
+      //Arrange
+      int amountPastries = 4;
+      Pastry testOrder = new Pastry(amountPastries);
+
+      //Act
+      int result = testOrder.PastryOrderCost();
+
+      //Assert
+      Assert.AreEqual(7, result);
+    }
   }
 }
