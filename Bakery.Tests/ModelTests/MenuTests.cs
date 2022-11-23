@@ -42,7 +42,7 @@ namespace Bakery.Tests
       Assert.AreEqual(10, result);
     }
     [TestMethod]
-    PastryOrderCost_Calculate4PastryCost_ReturnPastryTotal()
+    public void PastryOrderCost_Calculate4PastryCost_ReturnPastryTotal()
     {
       //Arrange
       int amountPastries = 4;
@@ -53,6 +53,19 @@ namespace Bakery.Tests
 
       //Assert
       Assert.AreEqual(7, result);
+    }
+    [TestMethod]
+    public void PastryOrderCost_Calculate2PastryCost_ReturnPastryTotal()
+    {
+      //Arrange
+      int amountPastries = 2;
+      Pastry testOrder = new Pastry(amountPastries);
+
+      //Act
+      int result = testOrder.PastryOrderCost();
+
+      //Assert
+      Assert.AreEqual(4, result);
     }
   }
 }

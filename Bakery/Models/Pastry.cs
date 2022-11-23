@@ -19,9 +19,15 @@ namespace Bakery.Models
         int pastryCost = ((AmountPastries - 1) * 2);
         return pastryCost;
       }
+      else if (AmountPastries == 3 || AmountPastries == 4 || AmountPastries == 5)
+      {
+        int pastryCost = (AmountPastries*2 - 1);
+        return pastryCost;
+      }
       else
       {
-        return 0;
+        int pastryCost = AmountPastries*2;
+        return pastryCost;
       }
     }
   }
