@@ -8,64 +8,59 @@ namespace Bakery.Tests
   public class PastryTests
   {
     [TestMethod]
-    public void PastryConstructor_CreateInstanceOfPastry__Pastry()
+    public void PastryConstructor_CreateInstanceOfPastry_Pastry()
     {
       Pastry testOrder = new Pastry(1);
       Assert.AreEqual(typeof(Pastry), testOrder.GetType());
     }
-
-    /* [TestMethod]
-    public void PastryOrder_ReturnAmountOfPastries_ReturnsNumber()
-    {
-      //Arrange
-      int amountPastries = 1;
-      Pastry testOrder = new Pastry(amountPastries);
-
-      //Act
-      int result = testOrder.AmountPastries;
-
-      //Assert
-      Assert.AreEqual(amountPastries, result);
-    }*/
-    
     [TestMethod]
-    public void PastryOrderCost_Calculate6PastryCost_ReturnPastryTotal()
+    public void PastryCost_Calculate6PastryCost_ReturnCost()
     {
       //Arrange
-      int amountPastries = 6;
-      Pastry testOrder = new Pastry(amountPastries);
+      int numberPastries = 6;
+      Pastry testOrder = new Pastry(numberPastries);
 
       //Act
-      int result = testOrder.PastryOrderCost();
+      int result = testOrder.PastryCost();
 
       //Assert
       Assert.AreEqual(10, result);
     }
     [TestMethod]
-    public void PastryOrderCost_Calculate4PastryCost_ReturnPastryTotal()
+    public void PastryCost_Calculate4PastryCost_ReturnCost()
     {
       //Arrange
-      int amountPastries = 4;
-      Pastry testOrder = new Pastry(amountPastries);
+      int numberPastries = 4;
+      Pastry testOrder = new Pastry(numberPastries);
 
       //Act
-      int result = testOrder.PastryOrderCost();
+      int result = testOrder.PastryCost();
 
       //Assert
       Assert.AreEqual(7, result);
     }
     [TestMethod]
-    public void PastryOrderCost_Calculate2PastryCost_ReturnPastryTotal()
+    public void PastryCost_Calculate2PastryCost_ReturnCost()
     {
       //Arrange
-      int amountPastries = 2;
-      Pastry testOrder = new Pastry(amountPastries);
+      int numberPastries = 2;
+      Pastry testOrder = new Pastry(numberPastries);
 
       //Act
-      int result = testOrder.PastryOrderCost();
+      int result = testOrder.PastryCost();
 
       //Assert
       Assert.AreEqual(4, result);
+    }
+  }
+  [TestClass]
+  public class BreadTests
+  {
+    [TestMethod]
+    public void BreadConstructor_CreateInstanceOfBread_Bread()
+    {
+      Bread testOrder = new Bread(1);
+      Assert.AreEqual(typeof(Bread), testOrder.GetType());
     }
   }
 }

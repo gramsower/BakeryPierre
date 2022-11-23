@@ -1,15 +1,15 @@
-using System;
-using System.Collections.Generic;
-using Bakery;
+//using System;
+// using System.Collections.Generic;
+// using Bakery;
 
 namespace Bakery.Models
 {
-  public class BreadOrder
+  public class Bread
   {
-    public int AmountBreadLoaves { get; set; }
-    public BreadOrder (int amountBreadLoaves)
+    public int NumberLoaves { get; set; }
+    public Bread (int numberLoaves)
     {
-      AmountBreadLoaves = amountBreadLoaves;
+      NumberLoaves = numberLoaves;
     }
   }
 }

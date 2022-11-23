@@ -1,32 +1,32 @@
-using System;
-using System.Collections.Generic;
-using Bakery;
+//using System;
+//using System.Collections.Generic;
+//using Bakery;
 
 namespace Bakery.Models
 {
   public class Pastry
   {
-    public int AmountPastries { get; set; }
-    public Pastry (int amountPastries)
+    public int NumberPastries { get; set; }
+    public Pastry (int numberPastries)
     {
-      AmountPastries = amountPastries;
+      NumberPastries = numberPastries;
     }
 
-    public int PastryOrderCost()
+    public int PastryCost()
     {
-      if (AmountPastries >= 6)
+      if (NumberPastries >= 6)
       {
-        int pastryCost = ((AmountPastries - 1) * 2);
+        int pastryCost = ((NumberPastries - 1) * 2);
         return pastryCost;
       }
-      else if (AmountPastries == 3 || AmountPastries == 4 || AmountPastries == 5)
+      else if (NumberPastries == 3 || NumberPastries == 4 || NumberPastries == 5)
       {
-        int pastryCost = (AmountPastries*2 - 1);
+        int pastryCost = (NumberPastries*2 - 1);
         return pastryCost;
       }
       else
       {
-        int pastryCost = AmountPastries*2;
+        int pastryCost = NumberPastries*2;
         return pastryCost;
       }
     }
