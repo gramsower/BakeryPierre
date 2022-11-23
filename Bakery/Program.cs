@@ -16,6 +16,9 @@ namespace Bakery
       int numberLoaves = int.Parse(breadInput);
       Console.WriteLine($"OK, {numberLoaves} loaves, coming right up!");
 
+      Bread breadOrder = new Bread(numberLoaves);
+      int breadCost = breadOrder.BreadCost();
+      Console.WriteLine($"Your pastry subtotal is: ${breadCost}.00");
 
       Console.WriteLine("And how many pastries would you like today?");
       string pastryInput = Console.ReadLine();

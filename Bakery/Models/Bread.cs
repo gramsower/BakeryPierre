@@ -11,5 +11,17 @@ namespace Bakery.Models
     {
       NumberLoaves = numberLoaves;
     }
+
+    public int BreadCost()
+    {
+      if (NumberLoaves == 1)
+      {
+        int breadCost = NumberLoaves * 5;
+        return breadCost;
+      }
+      else 
+      {
+        return 0;
+      }
   }
 }
