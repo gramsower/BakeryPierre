@@ -10,7 +10,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void PastryOrder_CreateInstanceOfPastryOrder_Order()
     {
-      PastryOrder testOrder = new PastryOrder(0);
+      PastryOrder testOrder = new PastryOrder(1);
       Assert.AreEqual(typeof(PastryOrder), testOrder.GetType());
     }
 
@@ -18,7 +18,7 @@ namespace Bakery.Tests
     public void PastryOrder_ReturnAmountOfPastries_ReturnsNumber()
     {
       //Arrange
-      int amountPastries = 0;
+      int amountPastries = 1;
       PastryOrder testOrder = new PastryOrder(amountPastries);
 
       //Act
@@ -27,5 +27,18 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(amountPastries, result);
     }   
+    /*[TestMethod]
+    public void PastryOrder_CalculateSinglePastryCost_ReturnPastryTotal()
+    {
+      //Arrange
+      int amountPastries = 1;
+      PastryOrder testOrder = new PastryOrder(amountPastries);
+
+      //Act
+      int result = testOrder.AmountPastries;
+
+      //Assert
+      Assert
+    } */
   }
 }
