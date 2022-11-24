@@ -14,22 +14,29 @@ namespace Bakery
       string breadInput = Console.ReadLine();
       int numberLoaves = int.Parse(breadInput);
       Console.WriteLine($"OK, {numberLoaves} loaves, coming right up!");
-
       Bread breadOrder = new Bread(numberLoaves);
       int breadCost = breadOrder.BreadCost();
-      Console.WriteLine($"By the way, your bread subtotal is: ${breadCost}.00");
 
       Console.WriteLine("And how many pastries would you like today?");
       string pastryInput = Console.ReadLine();
       int numberPastries = int.Parse(pastryInput);
       Console.WriteLine($"OK, {numberPastries} pastries on the way!");
-
       Pastry pastryOrder = new Pastry(numberPastries);
       int pastryCost = pastryOrder.PastryCost();
-      Console.WriteLine($"Your pastry subtotal is: ${pastryCost}.00");
 
       int totalCost = pastryCost + breadCost;
+      Console.WriteLine($"Your pastry subtotal is: ${pastryCost}.00");
+      Console.WriteLine($"By the way, your bread subtotal is: ${breadCost}.00");
       Console.WriteLine($"Your total is ${totalCost}.00. \nThank you for your support!");
+
+      Console.WriteLine("Would you like to place another order? (enter y/n)");
+      string userRerun = Console.ReadLine();
+      if (userRerun.ToLower() == "y")
+      {
+        Main();
+      }
+      Console.WriteLine("Goodbye.");
+      Environment.Exit(0);
     }
   }
 }
